@@ -1,0 +1,61 @@
+<html>
+
+<head>
+	<title>Itay Bittan's Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+</head>
+
+
+<body>
+	<div id="page1" data-role="page" data-rockncoder-jspage="page1" data-add-back-btn="true">
+		<header data-role="header" data-position="fixed">
+			<h2>Memory Management Simulation</h2>
+		</header>
+		<section data-role="content">
+			<p>
+				<strong>Team Members:</strong> Ido Levi and <a href="#">Itay Bittan</a>.
+			</p>
+			
+			<p>
+				<strong>Motivation:</strong> One of the jobs of an operating system is to manage memory. In this assignment, we will simulate the management of memory in a multi-process environment. 
+				Our simulated operating system will only contain those elements relevant for memory management. The memory hierarchy is composed of only two levels: The fast small memory which represents our computer's main memory (RAM), and the slow big memory (backing store) the disk. Both main memory (MM) and disk are divided into pages of fixed byte size.
+				Our simulation will handle the memory pages of several processes. Each process has its own virtual address space, and reads and writes information from memory using virtual addresses. Every process converts (using the MMU) the required logical address into a physical address, ensuring that the requested physical page is indeed in memory (if it is not, it must be loaded from the disk). 
+			</p>
+			
+			<p>
+				<strong>General Description:</strong> The simulator will include the following components: <br>
+				<ol>
+					<li>Main Memory (MM) &ndash; simulates the small fast memory.  The MM is of a fixed size and is composed of a collection of pages.</li>
+					<li>Disk &ndash; simulates the slow big memory device (like a hard disk).  The Disk keeps pages of the entire virtual memory. 
+					The Disk is of a fixed size and is composed of a collection of pages. In the Disk we keep all the process' pages in order, only some subset of these process' pages has a copy in the MM.</li>
+					<li>Memory Management Unit (MMU) &ndash; is responsible for converting a process’ logical address to its physical address in MM. 
+				The MMU uses an inverted page table (IPT), in which each entry represents a physical page in MM, which is always kept in the memory. A single IPT is used by the MMU to serve all processes. Hence, whenever a context switch is performed, there is no need to switch between different tables of the MMU. 
+				Each entry in the IPT represents a physical page in MM. The most important data that each entry i contains is whether the physical page i is free or the process ID and the logical page number of this process' virtual page that is stored in physical page i. For example, it may indicate that the physical page i contains the virtual page no. 9 of process 17.</li>
+				<li>Page Replacement Manager (PRM) &ndash; the PRM is a dedicated process simulated by a pthread. Each time a requested page is not in MM, the PRM is called to replace pages so that the requested page will be in the MM. It is the job of the PRM to find a free page slot in MM (if such free slot exists) and load the requested page from the Disk to the MM. If no such free page slot exists, the PRM removes a selected page to the Disk, and loads the requested page from the Disk to the now free slot in the MM.</li> 
+				<li>User Interface (UI) &ndash; a simple interactive 'shell' to test your program. The user can create processes, request processes to read/write from/to a memory address (by giving a logical address), print statistics (like the hit ratio) and print "debugging" information (such as which pages are in MM right now).</li>    
+				</ol>
+			</p>
+			
+			<p>
+				<strong>Technologies:</strong> The project was developed in C++, Linux environment.<br>
+			</p>
+
+			<p>
+				<ul>
+					<li><a href="https://github.com/itayB">Project source files</a> (on Github)</li>
+					<li><a href="http://www.cs.bgu.ac.il/~os102/wiki.files/assignment2_memory_simulation.doc">Assignment document</a> (taken from <a href="http://www.cs.bgu.ac.il/~os102">OS course site</a>)</li>
+				</ul>
+			</p>
+	    </section>
+		<footer data-role="footer" data-position="fixed">
+			<h1>Memory Management Simulation</h1>
+		</footer>
+	</div>
+	
+ </body>
+ </html>
+

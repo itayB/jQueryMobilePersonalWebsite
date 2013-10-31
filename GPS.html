@@ -1,0 +1,98 @@
+<html>
+
+<head>
+	<title>Itay Bittan's Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+</head>
+
+
+<body>
+	<div id="page1" data-role="page" data-rockncoder-jspage="page1" data-add-back-btn="true">
+		<header data-role="header" data-position="fixed">
+			<h2>GPS Signals Simulation In Urban Canyons</h2>
+		</header>
+		<section data-role="content">
+			<p>
+				<strong>Team Members:</strong> <a href="http://www.cs.bgu.ac.il/~eranfrie">Eran Friedman</a> and <a href="#">Itay Bittan</a>.
+			</p>
+			
+			<p>
+				<strong>Advisors:</strong> <a href="http://www.cs.bgu.ac.il/~matya">Prof. Matya Katz</a>, <a href="http://www.cs.bgu.ac.il/~carmip">Dr. Paz Carmi</a> and <a href="http://www.ariel.ac.il/sites/bmboaz">Dr. Boaz Ben-Moshe</a>.
+			</p>
+			
+			<p>
+				<strong>Background:</strong> GPS satellites transmit signals to earth, containing information such as 
+				their time synchronization and location. The receiver extracts this information and can
+				calculate its distance from the satellites. Knowing the distances from four different
+				satellites, the receiver can compute its 3D location on earth by performing spheres
+				intersection.
+			</p>
+			<p>
+				<strong>The Problem:</strong> When a GPS receiver is located among buildings, it may be that the
+				signal doesn&lsquo;t reach the receiver directly, but it is reflected off the buildings. This
+				phenomenon increases the calculated distance between the satellite and the receiver,
+				and leads to an error in the receiver location.
+			</p>
+			
+			<p>
+				<strong>Motivation:</strong> Urban navigation, Black box, Autonomous driving, etc.
+			</p>
+			
+			<div style="float:right">
+				<center>
+					<strong>Experiment in the Burssa, Ramat-Gan</strong><br>
+					<img src="images/Path.jpg" style="margin:2px"> 
+				</center> 
+				
+				<span style="font-weight:bold;margin:10px;background-color:blue; color:white;text-shadow: 0 0px 0 #fff;">Blue Path</span>- The real path.<br>
+				<span style="font-weight:bold;margin:10px;background-color:red; color:white;text-shadow: 0 0px 0 #fff;">Red Path</span>- As measured by GPS receiver.<br>
+			</div>
+			
+			<p>
+				<strong>The Project:</strong> The purpose of this project is to simulate the multipath behavior of GPS signals in urban canyons: given a 3D map of
+				buildings in preprocessing phase, and given a receiver and a satellite locations in query time, we want: <br>
+				&nbsp;&nbsp; &#8226; to check the existence of LOS (line of sight) between them. <br>
+				&nbsp;&nbsp; &#8226; to calculate the signals multipath (i.e., the different legal paths in which the signals can reach the receiver).
+			</p>
+			
+			<p>
+				<strong>Development:</strong> Include the following: <br>
+				&nbsp;&nbsp; &#8226; Application Requirements Document (<a href="pdf_server.php?file=content\ARD">requirements</a>)<br>
+				&nbsp;&nbsp; &#8226; Application Design Document (<a href="pdf_server.php?file=content\ADD">requirements</a>)<br>
+				&nbsp;&nbsp; &#8226; Testing document (<a href="#">requirements</a>)<br>
+				&nbsp;&nbsp; &#8226; User manual (<a href="#">requirements</a>)<br>
+				&nbsp;&nbsp; <span style="font-style:italic">Source documents doesn't exist for privacy reasons.</span>
+			</p>
+			
+			<p>
+				<strong>Example:</strong> Bursa, Ramat-Gan, Israel <br>
+				<iframe id="player" type="text/html"
+						src="http://www.youtube.com/embed/HOMm8hR40LI?enablejsapi=1" frameborder="0">
+				</iframe>
+			</p>
+			
+			<p>
+				<strong>Technologies:</strong> <br>
+				&nbsp;&nbsp; &#8226; C++: The project was developed in C++. <br>
+				&nbsp;&nbsp; &#8226; <a href="http://www.sketchup.com/">Google Sketchup</a>: A 3D modeling program. <br>
+				&nbsp;&nbsp; &#8226; Ruby: For extracting the buildings data from Google Sketchup to a text file. <br>
+				&nbsp;&nbsp; &#8226; <a href="earth.google.com">Google Earth</a>: Virtual globe, map and geographical information program. <br>
+				&nbsp;&nbsp; &#8226; <a href="https://developers.google.com/kml/">KML</a>: An XML scheme for expressing geographic annotation and visualization. <br>
+			</p>
+			
+			<img src="images/Ruby.gif" height="50">
+	    </section>
+		<footer data-role="footer" data-position="fixed">
+			<center>
+				<p style="font-size:70%">© 2013 Itay Bittan website. This site developed in <a href="http://jquerymobile.com/">jQuery mobile</a> and hosted by <a href="http://www.000webhost.com/">000webhost</a>.</p>
+			</center>
+		</footer>
+	</div>
+	
+ </body>
+ </html>
+
