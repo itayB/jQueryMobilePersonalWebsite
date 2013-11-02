@@ -96,3 +96,8 @@ h1:after{
     width: 290px;
   }
 }
+
+.ui-grid-b img {
+    width  : 100%;
+    height : auto;
+}
