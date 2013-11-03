@@ -117,8 +117,9 @@
 							<li>Enjoy!</li>
 						</ul>
 					</p>
-					<a href="http://il.linkedin.com/in/itaybittan" data-role="button" data-corners="false" data-mini="true" data-inline="true"><img src="images/LinkedIn-Logo.png" /></a>
-					<a href="http://github.com/itayb" data-role="button" data-corners="false" data-mini="true" data-inline="true"><img src="images/Github.png" /></a>
+					<a href="http://il.linkedin.com/in/itaybittan" target="_blank" data-role="button" data-corners="false" data-mini="true" data-inline="true"><img src="images/LinkedIn-Logo.png" /></a>
+					<a href="http://github.com/itayb" target="_blank" data-role="button" data-corners="false" data-mini="true" data-inline="true"><img src="images/Github.png" /></a>
+					<a href="http://stackoverflow.com/users/1011253/itayb" target="_blank" data-role="button" data-corners="false" data-mini="true" data-inline="true"><img src="images/StackoverflowLogo.png" /></a>
 				</div>
 			</div>	
 			
