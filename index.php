@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <head>
 	<title>Itay Bittan's Home Page</title>
@@ -111,8 +111,8 @@
 					<p>
 						<strong>About me: </strong> 
 						<ul>
-							<li>I'm software engineer at <a href="http://www.audiocodes.com">AudioCodes</a>.</li> 
-							<li>Graduated (B.Sc) from <a href="http://www.bgu.ac.il">Ben Gurion university</a>.</li>
+							<li>I'm software engineer at <a href="http://www.audiocodes.com" target="_blank">AudioCodes</a>.</li> 
+							<li>Graduated (B.Sc) from <a href="http://www.bgu.ac.il" target="_blank">Ben Gurion university</a>.</li>
 							<li>This site contains some of my personal works.</li>
 							<li>Enjoy!</li>
 						</ul>
@@ -126,7 +126,7 @@
 	    </section>
 		<footer data-role="footer" data-position="fixed">
 			<center>
-				<p style="font-size:70%">� 2013 Itay Bittan website. This site developed in <a href="http://jquerymobile.com/">jQuery mobile</a> and hosted by <a href="http://www.000webhost.com/">000webhost</a>.</p>
+				<p style="font-size:70%">© 2013 Itay Bittan website. This site developed in <a href="http://jquerymobile.com/" target="_blank">jQuery mobile</a> and hosted by <a href="http://www.000webhost.com/" target="_blank">000webhost</a>.</p>
 			</center>
 		</footer>
 	</div>

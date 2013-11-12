@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 
 <head>
 	<title>Itay Bittan's Page</title>
@@ -32,7 +32,7 @@
 					<li>Main Memory (MM) &ndash; simulates the small fast memory.  The MM is of a fixed size and is composed of a collection of pages.</li>
 					<li>Disk &ndash; simulates the slow big memory device (like a hard disk).  The Disk keeps pages of the entire virtual memory. 
 					The Disk is of a fixed size and is composed of a collection of pages. In the Disk we keep all the process' pages in order, only some subset of these process' pages has a copy in the MM.</li>
-					<li>Memory Management Unit (MMU) &ndash; is responsible for converting a process� logical address to its physical address in MM. 
+					<li>Memory Management Unit (MMU) &ndash; is responsible for converting a process logical address to its physical address in MM. 
 				The MMU uses an inverted page table (IPT), in which each entry represents a physical page in MM, which is always kept in the memory. A single IPT is used by the MMU to serve all processes. Hence, whenever a context switch is performed, there is no need to switch between different tables of the MMU. 
 				Each entry in the IPT represents a physical page in MM. The most important data that each entry i contains is whether the physical page i is free or the process ID and the logical page number of this process' virtual page that is stored in physical page i. For example, it may indicate that the physical page i contains the virtual page no. 9 of process 17.</li>
 				<li>Page Replacement Manager (PRM) &ndash; the PRM is a dedicated process simulated by a pthread. Each time a requested page is not in MM, the PRM is called to replace pages so that the requested page will be in the MM. It is the job of the PRM to find a free page slot in MM (if such free slot exists) and load the requested page from the Disk to the MM. If no such free page slot exists, the PRM removes a selected page to the Disk, and loads the requested page from the Disk to the now free slot in the MM.</li> 
@@ -46,13 +46,15 @@
 
 			<p>
 				<ul>
-					<li><a href="https://github.com/itayB">Project source files</a> (on Github)</li>
-					<li><a href="http://www.cs.bgu.ac.il/~os102/wiki.files/assignment2_memory_simulation.doc">Assignment document</a> (taken from <a href="http://www.cs.bgu.ac.il/~os102">OS course site</a>)</li>
+					<li><a href="https://github.com/itayB" target="_blank">Project source files</a> (on Github)</li>
+					<li><a href="http://www.cs.bgu.ac.il/~os102/wiki.files/assignment2_memory_simulation.doc" target="_blank">Assignment document</a> (taken from <a href="http://www.cs.bgu.ac.il/~os102" target="_blank">OS course site</a>)</li>
 				</ul>
 			</p>
 	    </section>
 		<footer data-role="footer" data-position="fixed">
-			<h1>Memory Management Simulation</h1>
+			<center>
+				<p style="font-size:70%">© 2013 Itay Bittan website. This site developed in <a href="http://jquerymobile.com/" target="_blank">jQuery mobile</a> and hosted by <a href="http://www.000webhost.com/" target="_blank">000webhost</a>.</p>
+			</center>
 		</footer>
 	</div>
 	
