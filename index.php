@@ -19,6 +19,18 @@
 		<header data-role="header" data-position="fixed">
 			<h1>Itay Bittan's Home Page</h1>
 		</header>
+		
+ 		<script type="text/template" id="template-dialog">
+			<div data-role="page">
+				<div data-role="content" data-theme="c">
+					<h2>This site is no longer maintained.</h2>
+					<p>Please refer to the new site.</p>
+					<a href="http://itaybittan.herokuapp.com" data-role="button" data-theme="b">Take me to the new site!</a>       
+					<a href="#" data-role="button" data-rel="back" data-theme="c">Stay here</a>    
+				</div>
+		   </div>
+        </script>
+
 		<section data-role="content">
 			<div class="content-secondary">
 				<div data-role="collapsible-set">				
@@ -121,8 +133,8 @@
 					<a href="http://github.com/itayb" target="_blank" data-role="button" data-corners="false" data-mini="true" data-inline="true"><img src="images/Github.png" /></a>
 					<a href="http://stackoverflow.com/users/1011253/itayb" target="_blank" data-role="button" data-corners="false" data-mini="true" data-inline="true"><img src="images/StackoverflowLogo.png" /></a>
 				</div>
-			</div>	
-			
+			</div> 
+
 	    </section>
 		<footer data-role="footer" data-position="fixed">
 			<center>
@@ -145,6 +157,21 @@
 	</div>
 	
 	<script src="/app.js" type="text/javascript"></script>
+ <script>
+$( document ).ready(function(){
+    setTimeout('showDialog()',2000);
+});
+
+function showDialog() {
+   var dialog = $( $( "#template-dialog" ).html() ); //actually i'm using here sg like this: _.template( $( "#template-dialog" ).html(), propObject );
+ 
+   dialog.dialog()
+            .appendTo( document.body );
+        $.mobile.changePage( dialog, { transition: "pop", role: "dialog", reverse: false }  );
+}
+ </script>
  </body>
+ 
+
  </html>
 
